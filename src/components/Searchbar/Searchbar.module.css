@@ -1,0 +1,77 @@
+.searchbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: sticky;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #fff;
+  background-color: #3f51b5;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.searchFormButton {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPjxwYXRoIGQ9Ik0gMjEgMyBDIDExLjYwMTU2MyAzIDQgMTAuNjAxNTYzIDQgMjAgQyA0IDI5LjM5ODQzOCAxMS42MDE1NjMgMzcgMjEgMzcgQyAyNC4zNTU0NjkgMzcgMjcuNDYwOTM4IDM2LjAxNTYyNSAzMC4wOTM3NSAzNC4zNDM3NSBMIDQyLjM3NSA0Ni42MjUgTCA0Ni42MjUgNDIuMzc1IEwgMzQuNSAzMC4yODEyNSBDIDM2LjY3OTY4OCAyNy40MjE4NzUgMzggMjMuODc4OTA2IDM4IDIwIEMgMzggMTAuNjAxNTYzIDMwLjM5ODQzOCAzIDIxIDMgWiBNIDIxIDcgQyAyOC4xOTkyMTkgNyAzNCAxMi44MDA3ODEgMzQgMjAgQyAzNCAyNy4xOTkyMTkgMjguMTk5MjE5IDMzIDIxIDMzIEMgMTMuODAwNzgxIDMzIDggMjcuMTk5MjE5IDggMjAgQyA4IDEyLjgwMDc4MSAxMy44MDA3ODEgNyAyMSA3IFoiLz48L3N2Zz4=);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  outline: none;
+}
+
+.searchFormButton:hover {
+  opacity: 1;
+}
+
+.searchFormButtonlabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.searchFormInput {
+  display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.searchFormInput::placeholder {
+  font: inherit;
+  font-size: 18px;
+}
