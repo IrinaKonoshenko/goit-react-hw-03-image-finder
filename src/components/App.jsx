@@ -21,16 +21,18 @@ export class App extends Component {
     this.setState({
       isLoading: true,
     });
-    Api.then(res => {
-      this.setState({
-        images: [...this.state.images, ...res.data.hits],
-        total: res.data.total,
+    Api.fetchImages(this.state.query, this.state.page)
+      .then(res => {
+        this.setState({
+          images: [...this.state.images, ...res.data.hits],
+          total: res.data.total,
+        });
+      })
+      .finally(() => {
+        this.setState({
+          isLoading: false,
+        });
       });
-    }).finally(() => {
-      this.setState({
-        isLoading: false,
-      });
-    });
   };
 
   componentDidUpdate(_, prevState) {
